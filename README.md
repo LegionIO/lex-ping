@@ -10,9 +10,18 @@ gem install lex-ping
 
 ## Functions
 
-- **Http** - HTTP ping (checks endpoint availability)
+- **Http** - HTTP ping (checks endpoint availability via UDP on port `http`)
 - **Tcp** - TCP ping (checks port connectivity)
 - **Udp** - UDP ping (checks UDP reachability)
+
+All runners accept `host:` and return `{ host:, result:, success: true/false }`.
+
+## Usage
+
+```ruby
+Legion::Ingress.run('lex_ping.tcp.ping', host: 'myservice.internal')
+Legion::Ingress.run('lex_ping.udp.ping', host: 'myservice.internal')
+```
 
 ## Requirements
 

@@ -8,8 +8,8 @@ Gem::Specification.new do |spec|
   spec.authors       = ['Esity']
   spec.email         = ['matthewdiverson@gmail.com']
 
-  spec.summary       = 'LEX::Slack'
-  spec.description   = 'Connects Legion to Slack'
+  spec.summary       = 'LEX::Ping'
+  spec.description   = 'Network connectivity checks for LegionIO via HTTP, TCP, and UDP'
   spec.homepage      = 'https://github.com/LegionIO/lex-ping'
   spec.license       = 'MIT'
   spec.required_ruby_version = '>= 3.4'
