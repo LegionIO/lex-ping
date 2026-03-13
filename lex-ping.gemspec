@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require_relative 'lib/legion/extensions/ping/version'
 
 Gem::Specification.new do |spec|
@@ -8,15 +10,16 @@ Gem::Specification.new do |spec|
 
   spec.summary       = 'LEX::Slack'
   spec.description   = 'Connects Legion to Slack'
-  spec.homepage      = 'https://bitbucket.org/legion-io/lex-ping'
+  spec.homepage      = 'https://github.com/LegionIO/lex-ping'
   spec.license       = 'MIT'
-  spec.required_ruby_version = Gem::Requirement.new('>= 2.5.0')
+  spec.required_ruby_version = '>= 3.4'
 
   spec.metadata['homepage_uri'] = spec.homepage
-  spec.metadata['source_code_uri'] = 'https://bitbucket.org/legion-io/lex-ping/src'
-  spec.metadata['documentation_uri'] = 'https://legionio.atlassian.net/wiki/spaces/LEX/pages/631373895'
-  spec.metadata['changelog_uri'] = 'https://legionio.atlassian.net/wiki/spaces/LEX/pages/631504993'
-  spec.metadata['bug_tracker_uri'] = 'https://bitbucket.org/legion-io/lex-ping/issues'
+  spec.metadata['source_code_uri'] = 'https://github.com/LegionIO/lex-ping'
+  spec.metadata['documentation_uri'] = 'https://github.com/LegionIO/lex-ping'
+  spec.metadata['changelog_uri'] = 'https://github.com/LegionIO/lex-ping'
+  spec.metadata['bug_tracker_uri'] = 'https://github.com/LegionIO/lex-ping/issues'
+  spec.metadata['rubygems_mfa_required'] = 'true'
   spec.require_paths = ['lib']
 
   spec.add_development_dependency 'rake'
