@@ -10,9 +10,9 @@ gem install lex-ping
 
 ## Functions
 
-- **Http** - HTTP ping (checks endpoint availability via UDP on port `http`)
-- **Tcp** - TCP ping (checks port connectivity)
-- **Udp** - UDP ping (checks UDP reachability)
+- **Http** - Checks reachability on port 80 via `Net::Ping::UDP` (uses UDP probe to the `http` port)
+- **Tcp** - TCP ping (checks port connectivity via `Net::Ping::TCP`)
+- **Udp** - UDP ping (checks UDP reachability via `Net::Ping::UDP`)
 
 All runners accept `host:` and return `{ host:, result:, success: true/false }`.
 
