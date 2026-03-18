@@ -10,14 +10,14 @@ Legion Extension that performs network connectivity checks. Provides runners for
 
 **GitHub**: https://github.com/LegionIO/lex-ping
 **License**: MIT
-**Version**: 0.1.0
+**Version**: 0.1.1
 
 ## Architecture
 
 ```
 Legion::Extensions::Ping
 └── Runners/
-    ├── Http               # HTTP ping via Net::Ping::UDP on port 'http'
+    ├── Http               # HTTP ping via Net::Ping::HTTP (auto-prepends http:// scheme)
     ├── Tcp                # TCP ping via Net::Ping::TCP
     └── Udp                # UDP ping via Net::Ping::UDP
 ```
@@ -31,7 +31,7 @@ All three runners expose a single `ping(host:, **)` method and return:
 { host: host, result: result_object, success: true/false }
 ```
 
-Note: The HTTP runner currently uses `Net::Ping::UDP.new(host, 'http')` rather than an HTTP-specific class.
+The HTTP runner auto-prepends `http://` to bare hostnames and uses `Net::Ping::HTTP` for proper HTTP reachability checks.
 
 ## Key Files
 

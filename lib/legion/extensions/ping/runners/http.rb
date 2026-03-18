@@ -6,7 +6,8 @@ module Legion
       module Runners
         module Http
           def ping(host:, **)
-            result = Net::Ping::UDP.new(host, 'http')
+            url = host.start_with?('http://', 'https://') ? host : "http://#{host}"
+            result = Net::Ping::HTTP.new(url)
             { host: host, result: result, success: result.ping? }
           end
 
