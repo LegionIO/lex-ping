@@ -10,7 +10,7 @@ gem install lex-ping
 
 ## Functions
 
-- **Http** - Checks reachability on port 80 via `Net::Ping::UDP` (uses UDP probe to the `http` port)
+- **Http** - Checks reachability via `Net::Ping::HTTP` (auto-prepends `http://` to bare hostnames)
 - **Tcp** - TCP ping (checks port connectivity via `Net::Ping::TCP`)
 - **Udp** - UDP ping (checks UDP reachability via `Net::Ping::UDP`)
 
@@ -19,6 +19,7 @@ All runners accept `host:` and return `{ host:, result:, success: true/false }`.
 ## Usage
 
 ```ruby
+Legion::Ingress.run('lex_ping.http.ping', host: 'myservice.internal')
 Legion::Ingress.run('lex_ping.tcp.ping', host: 'myservice.internal')
 Legion::Ingress.run('lex_ping.udp.ping', host: 'myservice.internal')
 ```
