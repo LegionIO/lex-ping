@@ -2,16 +2,6 @@
 
 require 'spec_helper'
 
-unless defined?(Legion::Extensions::Helpers::Lex)
-  module Legion
-    module Extensions
-      module Helpers
-        module Lex; end
-      end
-    end
-  end
-end
-
 unless defined?(Net::Ping::TCP)
   module Net
     module Ping
