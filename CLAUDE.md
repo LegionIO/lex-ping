@@ -10,7 +10,7 @@ Legion Extension that performs network connectivity checks. Provides runners for
 
 **GitHub**: https://github.com/LegionIO/lex-ping
 **License**: MIT
-**Version**: 0.1.1
+**Version**: 0.1.2
 
 ## Architecture
 
@@ -47,7 +47,7 @@ The HTTP runner auto-prepends `http://` to bare hostnames and uses `Net::Ping::H
 | Gem | Purpose |
 |-----|---------|
 | `net-ping` | Network ping library (TCP, UDP) |
-| `multi_json` | JSON parser abstraction |
+| legion sub-gems | legion-cache, legion-crypt, legion-data, legion-json, legion-logging, legion-settings, legion-transport |
 
 ## Testing
 
