@@ -37,7 +37,6 @@ Gem::Specification.new do |spec|
   spec.add_dependency 'legion-transport', '>= 1.3.9'
   spec.add_dependency 'net-ping'
 
-  spec.add_development_dependency 'rake'
   spec.add_development_dependency 'rspec'
   spec.add_development_dependency 'rubocop'
   spec.add_development_dependency 'rubocop-rspec'
